@@ -1,0 +1,211 @@
+@import "tailwindcss";
+/* @custom-variant dark (&:where(.dark, .dark *)); */
+
+@font-face {
+  font-family: "Poppins";
+  src: url(/fonts/Poppins-Regular.woff2) format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(/fonts/Poppins-Medium.woff2) format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(/fonts/Poppins-SemiBold.woff2) format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(/fonts/Poppins-Bold.woff2) format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@theme {
+    --font-poppins: "Poppins", sans-serif;
+    --color-primary: #B23920;
+    --color-secondary: #FAEACE;
+    --color-tertiary: #223c5f;
+}
+
+@layer base{
+
+    header{
+        @apply bg-white;
+    }
+
+    html{
+        @apply scroll-smooth scroll-p-16;
+    }
+    body{
+        @apply overflow-x-hidden font-poppins text-black/80 text-base bg-white dark:text-white/80;
+    }
+    .container {
+        @apply max-w-7xl w-full mx-auto px-4;
+    }
+    h1 {
+    @apply text-[clamp(2.85rem,6vw,3rem)] font-bold;
+  }
+  h2 {
+    @apply text-[clamp(1.5rem,5vw,2.5rem)] font-bold;
+  }
+  h3 {
+    @apply text-[clamp(1.25rem,4vw,2rem)] font-bold;
+  }
+  h4 {
+    @apply text-[clamp(1rem,3vw,1.75rem)] font-bold;
+  }
+  h5 {
+    @apply text-xl font-semibold;
+  }
+  h6 {
+    @apply text-lg font-semibold;
+  }
+}
+
+@layer components {
+    header {
+        @apply bg-white;
+    }
+
+    .headerNav ul{
+        @apply flex flex-col gap-5 fixed w-full top-26 text-left items-start overflow-hidden right-0 h-0 opacity-0 duration-300
+        /* Desktop */
+        md:opacity-100 md:flex-row md:items-center md:top-auto md:h-auto md:static;
+    }
+    .headerNav ul.open {
+        @apply h-fit opacity-100 bg-white top-35 px-4 py-5 duration-300 
+        /* Desktop */
+        md:shadow-none md:px-0 md:pb-0;
+    }
+    .toggleMenu span{
+        @apply inline-block w-5 h-0.5 rounded-xl bg-black/80;
+    }
+    .toggleMenu.open span:first-child {
+        @apply rotate-45 translate-y-2 duration-100;
+    }
+    .toggleMenu.open span:nth-child(2){
+        @apply opacity-0;
+    }
+    .toggleMenu.open span:last-child{
+        @apply -rotate-45 -translate-y-1;
+    }
+    .toggleMenu {
+        @apply flex flex-col gap-1 md:hidden;
+    }
+    .transparent {
+        @apply hidden;
+    }
+    .transparent.open {
+        @apply block fixed h-screen w-full backdrop-blur-sm left-0 top-84 duration-300 overflow-y-hidden;
+    }
+    .title {
+        @apply mt-2 mb-4 leading-10;
+    }
+    .btn{
+        @apply inline-block px-6 py-3 rounded-lg font-medium
+        w-full text-center md:w-auto;
+    }
+    .btn--primary{
+        @apply bg-primary text-white;
+    }
+    .btn--secondary{
+        @apply border border-primary bg-transparent hover:bg-primary ;
+    }
+    .card,
+    .eventCard {
+        @apply bg-white dark:bg-gray-800 dark:text-white p-8 rounded-xl shadow-md;
+    }
+    .card img{
+        @apply size-16 mb-6;
+    }
+    .card h3,
+    .eventCard h5 {
+        @apply font-semibold mb-3 text-blue-700
+    }
+    .card p{
+        @apply mb-5;
+    }
+    .card a{
+        @apply text-blue-600 font-medium hover:text-blue-700;
+    }
+    #about ul li{
+        @apply flex gap-2 mb-4;
+    }
+    .testimonialItem {
+        @apply bg-white dark:bg-gray-800 py-10 px-12 rounded-xl shadow-md
+        text-center mb-4;
+    }
+    .testimonialItem img{
+        @apply size-20 object-cover rounded-full mx-auto mb-4
+    }
+    .testimonialItem p{
+        @apply italic mb-4;
+    }
+    .tns-outer{
+        @apply overflow-hidden max-w-6xl;
+    }
+    .tns-outer > button {
+        @apply hidden;
+    }
+    .tns-nav{
+        @apply flex justify-center gap-2 mt-7;
+    }
+    .tns-nav button {
+        @apply bg-black/40 dark:bg-white/40 rounded-full size-3;
+    }
+    .tns-nav button.tns-nav-active{
+        @apply bg-blue-500;
+    }
+    .eventTab{
+        @apply font-bold border-r pr-3 cursor-pointer lg:px-10;
+    }
+    .eventTab.active{
+        @apply text-black;
+    }
+    .eventTab:last-child{
+        @apply border-none;
+    }
+    .eventItemWrap {
+        @apply flex flex-col flex-wrap gap-5;
+    }
+    .eventItem {
+        @apply hidden lg:hidden;
+    }
+    .eventItem.active{
+        @apply block lg:block;
+    }
+    .contactDetail{
+        @apply flex gap-3 mb-8 mt-6;
+    }
+    .contactHours{
+        @apply flex justify-between items-center;
+    }
+    form input, form textarea {
+        @apply w-full px-4 py-2 border border-black/30 dark:border-white bg-white dark:bg-gray-900
+        rounded-lg mt-3 mb-6 focus:ring-2 focus:ring-blue-500 focus:outline-none;
+    }
+    footer h5{
+        @apply mb-4 text-white
+    }
+    .footerLink {
+        @apply space-y-2 
+    }
+    .footerLink li{
+        @apply text-white/60 hover:text-white;
+    }
+    .footerDetail{
+        @apply flex gap-3 mb-4 text-white/60 hover:text-white;
+    }
+    .footerSocial{
+        @apply flex gap-5 mt-3 md:mt-0;
+    }
+    .footerSocial li {
+        @apply text-white/60 hover:text-white
+    }
+}
