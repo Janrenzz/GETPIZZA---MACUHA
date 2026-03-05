@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dist/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <title>GET PIZZA</title>
+</head>
+<body class="">
+  <header class="fixed top-0 left-0 p-5 w-full z-50 bg-white py-0 shadow-md">
+    <div class="container">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center gap-2 pt-5 pb-5">
+          <img class="size-full" src="../IMG/LOGO.png" alt="logo">
+        </div>
+
+        <nav class="headerNav text-black">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="toggleMenu items-center">
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="transparent"></div>
+      </div>
+    </div>
+  </header>
+
+<!-- Banner -->
+<section class="banner relative h-[100vh] md:h-[80vh] flex items-center overflow-hidden">
+
+  <!-- Background Image -->
+  <img
+    src="./IMG/menubanner.jpg"
+    alt="Pizza Banner"
+    class="absolute inset-0 w-full h-full object-cover"
+  />
+
+  <!-- Dark Overlay -->
+  <div class="absolute inset-0 bg-black/60"></div>
+
+  <!-- Announcement -->
+  <div class="absolute top-0 left-0 w-full bg-white py-3 text-center z-20 pt-38">
+    <p class="text-primary font-semibold text-sm md:text-base flex items-center justify-center gap-2">
+      📢 This website provides information about our store. Online transactions are coming soon.
+    </p>
+  </div>
+
+  <!-- Content -->
+  <div class="relative z-10 container text-center">
+    <h2 class="text-white font-extrabold leading-tight
+               text-3xl md:text-5xl mt-20">
+      ALWAYS FRESH <br> & READY TO SERVE
+    </h2>
+  </div>
+
+</section>
+
+    <!-- Offer -->
+    <section id="offer" class="bg-tertiary py-14 md:py-20">
+    <div class="container">
+        <!-- Header -->
+        <h2 class="text-center text-white font-extrabold tracking-wide text-[clamp(1.8rem,4vw,2.6rem)]">
+        WE OFFER PEOPLE BEST WAY TO<br class="hidden sm:block" />
+        EAT BEST FOOD
+        </h2>
+
+        <!-- Text Tabs -->
+        <div class="mt-10 flex justify-center">
+        <div
+            id="menuTabs"
+            class="flex flex-nowrap items-center justify-center gap-1 bg-secondary rounded-full px-2 py-2 w-full max-w-4xl overflow-x-auto"
+        >
+            <button
+            class="menuTab rounded-full px-3 md:px-4 py-2 text-center font-extrabold uppercase tracking-wide text-[11px] md:text-sm text-primar whitespace-nowrap"
+            data-menu="pizza"
+            aria-pressed="true"
+            type="button"
+            >
+            PIZZA
+            </button>
+
+            <button
+            class="menuTab rounded-full px-3 md:px-4 py-2 text-center font-extrabold uppercase tracking-wide text-[11px] md:text-sm text-tertiary/80 bg-transparent whitespace-nowrap"
+            data-menu="burger"
+            aria-pressed="false"
+            type="button"
+            >
+            BURGER
+            </button>
+
+            <button
+            class="menuTab rounded-full px-3 md:px-4 py-2 text-center font-extrabold uppercase tracking-wide text-[11px] md:text-sm text-tertiary/80 bg-transparent whitespace-nowrap"
+            data-menu="chicken"
+            aria-pressed="false"
+            type="button"
+            >
+            CHICKEN
+            </button>
+
+            <button
+            class="menuTab rounded-full px-3 md:px-4 py-2 text-center font-extrabold uppercase tracking-wide text-[11px] md:text-sm text-tertiary/80 bg-transparent whitespace-nowrap"
+            data-menu="drinks"
+            aria-pressed="false"
+            type="button"
+            >
+            DRINKS
+            </button>
+
+            <button
+            class="menuTab rounded-full px-3 md:px-4 py-2 text-center font-extrabold uppercase tracking-wide text-[11px] md:text-sm text-tertiary/80 bg-transparent whitespace-nowrap"
+            data-menu="dessert"
+            aria-pressed="false"
+            type="button"
+            >
+            CAKE
+            </button>
+        </div>
+        </div>
+
+        <!-- Offer Cards -->
+        <div id="offerGrid" class="mt-12 grid grid-cols-2 md:grid-cols-3 gap-10">
+
+        <!-- ================= PIZZA ================= -->
+        <article class="offerCard flex flex-col items-center text-center p-8" data-menu="pizza">
+            <div class="offerCircle flex items-center justify-center w-40 h-40 rounded-full mb-6 ring-2 ring-white/40">
+            <img src="../IMG/prosciutto.png" alt="Prosciutto Pizza" class="w-24 h-24 object-contain" />
+            </div>
+            <h3 class="text-white font-extrabold tracking-wide text-xl">PROSCIUTTO PIZZA</h3>
+            <p class="text-white font-semibold mt-2">$25.00</p>
+            <div class="mt-3 mb-4 text-yellow-400 text-xl">★★★★★</div>
+            <a class="btn--secondary px-4 py-2 rounded-xl text-white border border-primary" href="#">Read more</a>
+        </article>
+
+        <article class="offerCard flex flex-col items-center text-center p-8" data-menu="pizza">
+            <div class="offerCircle flex items-center justify-center w-40 h-40 rounded-full mb-6 ring-2 ring-white/40">
+            <img src="../IMG/bbq pizza.png" alt="BBQ Pizza" class="w-24 h-24 object-contain" />
+            </div>
+            <h3 class="text-white font-extrabold tracking-wide text-xl">BBQ PIZZA</h3>
+            <p class="text-white font-semibold mt-2">$25.00</p>
+            <div class="mt-3 mb-4 text-yellow-400 text-xl">★★★★★</div>
+            <a class="btn--secondary px-4 py-2 rounded-xl text-white border border-primary" href="#">Read more</a>
+        </article>
+
+        <article class="offerCard flex flex-col items-center text-center p-8" data-menu="pizza">
+            <div class="offerCircle flex items-center justify-center w-40 h-40 rounded-full mb-6 ring-2 ring-white/40">
+            <img src="../IMG/bbq pizza.png" alt="BBQ Pizza" class="w-24 h-24 object-contain" />
+            </div>
+            <h3 class="text-white font-extrabold tracking-wide text-xl">BBQ PIZZA</h3>
+            <p class="text-white font-semibold mt-2">$25.00</p>
+            <div class="mt-3 mb-4 text-yellow-400 text-xl">★★★★★</div>
+            <a class="btn--secondary px-4 py-2 rounded-xl text-white border border-primary" href="#">Read more</a>
+        </article>
+
+        <article class="offerCard flex flex-col items-center text-center p-8" data-menu="pizza">
+            <div class="offerCircle flex items-center justify-center w-40 h-40 rounded-full mb-6 ring-2 ring-white/40">
+            <img src="../IMG/prosciutto.png" alt="Prosciutto Pizza" class="w-24 h-24 object-contain" />
+            </div>
+            <h3 class="text-white font-extrabold tracking-wide text-xl">PROSCIUTTO PIZZA</h3>
+            <p class="text-white font-semibold mt-2">$25.00</p>
+            <div class="mt-3 mb-4 text-yellow-400 text-xl">★★★★★</div>
+            <a class="btn--secondary px-4 py-2 rounded-xl text-white border border-primary" href="#">Read more</a>
+        </article>
+
+        <article class="offerCard flex flex-col items-center text-center p-8" data-menu="pizza">
+            <div class="offerCircle flex items-center justify-center w-40 h-40 rounded-full mb-6 ring-2 ring-white/40">
+            <img src="../IMG/bbq pizza.png" alt="BBQ Pizza" class="w-24 h-24 object-contain" />
+            </div>
+            <h3 class="text-white font-extrabold tracking-wide text-xl">BBQ PIZZA</h3>
+            <p class="text-white font-semibold mt-2">$25.00</p>
+            <div class="mt-3 mb-4 text-yellow-400 text-xl">★★★★★</div>
+            <a class="btn--secondary px-4 py-2 rounded-xl text-white border border-primary" href="#">Read more</a>
+        </article>
+
+        <article class="offerCard flex flex-col items-center text-center p-8" data-menu="pizza">
+            <div class="offerCircle flex items-center justify-center w-40 h-40 rounded-full mb-6 ring-2 ring-white/40">
+            <img src="../IMG/prosciutto.png" alt="Prosciutto Pizza" class="w-24 h-24 object-contain" />
+            </div>
+            <h3 class="text-white font-extrabold tracking-wide text-xl">PROSCIUTTO PIZZA</h3>
+            <p class="text-white font-semibold mt-2">$25.00</p>
+            <div class="mt-3 mb-4 text-yellow-400 text-xl">★★★★★</div>
+            <a class="btn--secondary px-4 py-2 rounded-xl text-white border border-primary" href="#">Read more</a>
+        </article>
+
+        <!-- ================= BURGER ================= -->
+        <article class="offerCard hidden flex flex-col items-center text-center p-8" data-menu="burger">
+            <div class="offerCircle flex items-center justify-center w-40 h-40 rounded-full mb-6 ring-2 ring-white/40">
+            <img src="../IMG/CHEESE BURGER.png" alt="Cheese Burger" class="w-24 h-24 object-contain" />
+            </div>
+            <h3 class="text-white font-extrabold tracking-wide text-xl">CHEESE BURGER</h3>
+            <p class="text-white font-semibold mt-2">$12.00</p>
+            <div class="mt-3 mb-4 text-yellow-400 text-xl">★★★★★</div>
+            <a class="btn--secondary px-4 py-2 rounded-xl text-white border border-primary" href="#">Read more</a>
+        </article>
+
+        <article class="offerCard hidden flex flex-col items-center text-center p-8" data-menu="burger">
+            <div class="offerCircle flex items-center justify-center w-40 h-40 rounded-full mb-6 ring-2 ring-white/40">
+            <img src="../IMG/serve-burger.png" alt="Double Burger" class="w-24 h-24 object-contain" />
+            </div>
+            <h3 class="text-white font-extrabold tracking-wide text-xl">DOUBLE BURGER</h3>
+            <p class="text-white font-semibold mt-2">$14.00</p>
+            <div class="mt-3 mb-4 text-yellow-400 text-xl">★★★★★</div>
+            <a class="btn--secondary px-4 py-2 rounded-xl text-white border border-primary" href="#">Read more</a>
+        </article>
+
+        <article class="offerCard hidden flex flex-col items-center text-center p-8" data-menu="burger">
+            <div class="offerCircle flex items-center justify-center w-40 h-40 rounded-full mb-6 ring-2 ring-white/40">
+            <img src="../IMG/CHEESE BURGER.png" alt="Cheese Burger" class="w-24 h-24 object-contain" />
+            </div>
+            <h3 class="text-white font-extrabold tracking-wide text-xl">CHEESE BURGER</h3>
+            <p class="text-white font-semibold mt-2">$12.00</p>
+            <div class="mt-3 mb-4 text-yellow-400 text-xl">★★★★★</div>
+            <a class="btn--secondary px-4 py-2 rounded-xl text-white border border-primary" href="#">Read more</a>
+        </article>
+
+        <article class="offerCard hidden flex flex-col items-center text-center p-8" data-menu="burger">
+            <div class="offerCircle flex items-center justify-center w-40 h-40 rounded-full mb-6 ring-2 ring-white/40">
+            <img src="../IMG/serve-burger.png" alt="Double Burger" class="w-24 h-24 object-contain" />
+            </div>
+            <h3 class="text-white font-extrabold tracking-wide text-xl">DOUBLE BURGER</h3>
+            <p class="text-white font-semibold mt-2">$14.00</p>
+            <div class="mt-3 mb-4 text-yellow-400 text-xl">★★★★★</div>
+            <a class="btn--secondary px-4 py-2 rounded-xl text-white border border-primary" href="#">Read more</a>
+        </article>
+
+        <article class="offerCard hidden flex flex-col items-center text-center p-8" data-menu="burger">
+            <div class="offerCircle flex items-center justify-center w-40 h-40 rounded-full mb-6 ring-2 ring-white/40">
+            <img src="../IMG/CHEESE BURGER.png" alt="Cheese Burger" class="w-24 h-24 object-contain" />
+            </div>
+            <h3 class="text-white font-extrabold tracking-wide text-xl">CHEESE BURGER</h3>
+            <p class="text-white font-semibold mt-2">$12.00</p>
+            <div class="mt-3 mb-4 text-yellow-400 text-xl">★★★★★</div>
+            <a class="btn--secondary px-4 py-2 rounded-xl text-white border border-primary" href="#">Read more</a>
+        </article>
+
+        <article class="offerCard hidden flex flex-col items-center text-center p-8" data-menu="burger">
+            <div class="offerCircle flex items-center justify-center w-40 h-40 rounded-full mb-6 ring-2 ring-white/40">
+            <img src="../IMG/serve-burger.png" alt="Double Burger" class="w-24 h-24 object-contain" />
+            </div>
+            <h3 class="text-white font-extrabold tracking-wide text-xl">DOUBLE BURGER</h3>
+            <p class="text-white font-semibold mt-2">$14.00</p>
+            <div class="mt-3 mb-4 text-yellow-400 text-xl">★★★★★</div>
+            <a class="btn--secondary px-4 py-2 rounded-xl text-white border border-primary" href="#">Read more</a>
+        </article>
+
+        <!-- ================= CHICKEN ================= -->
+        <article class="offerCard hidden flex flex-col items-center text-center p-8" data-menu="chicken">
+            <div class="offerCircle flex items-center justify-center w-40 h-40 rounded-full mb-6 ring-2 ring-white/40">
+            <img src="../IMG/CHICKEN WITH BREAD.png" alt="Fillet With Bread" class="w-24 h-24 object-contain" />
+            </div>
+            <h3 class="text-white font-extrabold tracking-wide text-xl">FILLET WITH BREAD</h3>
+            <p class="text-white font-semibold mt-2">$45.00</p>
+            <div class="mt-3 mb-4 text-yellow-400 text-xl">★★★★★</div>
+            <a class="btn--secondary px-4 py-2 rounded-xl text-white border border-primary" href="#">Read more</a>
+        </article>
+
+        <article class="offerCard hidden flex flex-col items-center text-center p-8" data-menu="chicken">
+            <div class="offerCircle flex items-center justify-center w-40 h-40 rounded-full mb-6 ring-2 ring-white/40">
+            <img src="../IMG/CHICKEN WITH BREAD.png" alt="Crispy Chicken" class="w-24 h-24 object-contain" />
+            </div>
+            <h3 class="text-white font-extrabold tracking-wide text-xl">CRISPY CHICKEN</h3>
+            <p class="text-white font-semibold mt-2">$58.00</p>
+            <div class="mt-3 mb-4 text-yellow-400 text-xl">★★★★★</div>
+            <a class="btn--secondary px-4 py-2 rounded-xl text-white border border-primary" href="#">Read more</a>
+        </article>
+
+        <article class="offerCard hidden flex flex-col items-center text-center p-8" data-menu="chicken">
+            <div class="offerCircle flex items-center justify-center w-40 h-40 rounded-full mb-6 ring-2 ring-white/40">
+            <img src="../IMG/CHICKEN WITH BREAD.png" alt="Spicy Chicken" class="w-24 h-24 object-contain" />
+            </div>
+            <h3 class="text-white font-extrabold tracking-wide text-xl">SPICY CHICKEN</h3>
+            <p class="text-white font-semibold mt-2">$52.00</p>
+            <div class="mt-3 mb-4 text-yellow-400 text-xl">★★★★★</div>
+            <a class="btn--secondary px-4 py-2 rounded-xl text-white border border-primary" href="#">Read more</a>
+        </article>
+
+        <article class="offerCard hidden flex flex-col items-center text-center p-8" data-menu="chicken">
+            <div class="offerCircle flex items-center justify-center w-40 h-40 rounded-full mb-6 ring-2 ring-white/40">
+            <img src="../IMG/CHICKEN WITH BREAD.png" alt="Fillet With Bread" class="w-24 h-24 object-contain" />
+            </div>
+            <h3 class="text-white font-extrabold tracking-wide text-xl">FILLET WITH BREAD</h3>
+            <p class="text-white font-semibold mt-2">$45.00</p>
+            <div class="mt-3 mb-4 text-yellow-400 text-xl">★★★★★</div>
+            <a class="btn--secondary px-4 py-2 rounded-xl text-white border border-primary" href="#">Read more</a>
+        </article>
+
+        <article class="offerCard hidden flex flex-col items-center text-center p-8" data-menu="chicken">
+            <div class="offerCircle flex items-center justify-center w-40 h-40 rounded-full mb-6 ring-2 ring-white/40">
+            <img src="../IMG/CHICKEN WITH BREAD.png" alt="Crispy Chicken" class="w-24 h-24 object-contain" />
+            </div>
+            <h3 class="text-white font-extrabold tracking-wide text-xl">CRISPY CHICKEN</h3>
+            <p class="text-white font-semibold mt-2">$58.00</p>
+            <div class="mt-3 mb-4 text-yellow-400 text-xl">★★★★★</div>
+            <a class="btn--secondary px-4 py-2 rounded-xl text-white border border-primary" href="#">Read more</a>
+        </article>
+
+        <article class="offerCard hidden flex flex-col items-center text-center p-8" data-menu="chicken">
+            <div class="offerCircle flex items-center justify-center w-40 h-40 rounded-full mb-6 ring-2 ring-white/40">
+            <img src="../IMG/CHICKEN WITH BREAD.png" alt="Spicy Chicken" class="w-24 h-24 object-contain" />
+            </div>
+            <h3 class="text-white font-extrabold tracking-wide text-xl">SPICY CHICKEN</h3>
+            <p class="text-white font-semibold mt-2">$52.00</p>
+            <div class="mt-3 mb-4 text-yellow-400 text-xl">★★★★★</div>
+            <a class="btn--secondary px-4 py-2 rounded-xl text-white border border-primary" href="#">Read more</a>
+        </article>
+
+        <!-- ================= DRINKS ================= -->
+        <article class="offerCard hidden flex flex-col items-center text-center p-8" data-menu="drinks">
+            <div class="offerCircle flex items-center justify-center w-40 h-40 rounded-full mb-6 ring-2 ring-white/40">
+            <img src="../IMG/ORANGE DRINK.png" alt="Orange Drink" class="w-24 h-24 object-contain" />
+            </div>
+            <h3 class="text-white font-extrabold tracking-wide text-xl">ORANGE DRINK</h3>
+            <p class="text-white font-semibold mt-2">$5.00</p>
+            <div class="mt-3 mb-4 text-yellow-400 text-xl">★★★★★</div>
+            <a class="btn--secondary px-4 py-2 rounded-xl text-white border border-primary" href="#">Read more</a>
+        </article>
+
+        <article class="offerCard hidden flex flex-col items-center text-center p-8" data-menu="drinks">
+            <div class="offerCircle flex items-center justify-center w-40 h-40 rounded-full mb-6 ring-2 ring-white/40">
+            <img src="../IMG/ORANGE DRINK.png" alt="Lemon Drink" class="w-24 h-24 object-contain" />
+            </div>
+            <h3 class="text-white font-extrabold tracking-wide text-xl">LEMON DRINK</h3>
+            <p class="text-white font-semibold mt-2">$6.00</p>
+            <div class="mt-3 mb-4 text-yellow-400 text-xl">★★★★★</div>
+            <a class="btn--secondary px-4 py-2 rounded-xl text-white border border-primary" href="#">Read more</a>
+        </article>
+
+        <article class="offerCard hidden flex flex-col items-center text-center p-8" data-menu="drinks">
+            <div class="offerCircle flex items-center justify-center w-40 h-40 rounded-full mb-6 ring-2 ring-white/40">
+            <img src="../IMG/ORANGE DRINK.png" alt="Cola Drink" class="w-24 h-24 object-contain" />
+            </div>
+            <h3 class="text-white font-extrabold tracking-wide text-xl">COLA DRINK</h3>
+            <p class="text-white font-semibold mt-2">$7.00</p>
+            <div class="mt-3 mb-4 text-yellow-400 text-xl">★★★★★</div>
+            <a class="btn--secondary px-4 py-2 rounded-xl text-white border border-primary" href="#">Read more</a>
+        </article>
+
+        <article class="offerCard hidden flex flex-col items-center text-center p-8" data-menu="drinks">
+            <div class="offerCircle flex items-center justify-center w-40 h-40 rounded-full mb-6 ring-2 ring-white/40">
+            <img src="../IMG/ORANGE DRINK.png" alt="Orange Drink" class="w-24 h-24 object-contain" />
+            </div>
+            <h3 class="text-white font-extrabold tracking-wide text-xl">ORANGE DRINK</h3>
+            <p class="text-white font-semibold mt-2">$5.00</p>
+            <div class="mt-3 mb-4 text-yellow-400 text-xl">★★★★★</div>
+            <a class="btn--secondary px-4 py-2 rounded-xl text-white border border-primary" href="#">Read more</a>
+        </article>
+
+        <article class="offerCard hidden flex flex-col items-center text-center p-8" data-menu="drinks">
+            <div class="offerCircle flex items-center justify-center w-40 h-40 rounded-full mb-6 ring-2 ring-white/40">
+            <img src="../IMG/ORANGE DRINK.png" alt="Lemon Drink" class="w-24 h-24 object-contain" />
+            </div>
+            <h3 class="text-white font-extrabold tracking-wide text-xl">LEMON DRINK</h3>
+            <p class="text-white font-semibold mt-2">$6.00</p>
+            <div class="mt-3 mb-4 text-yellow-400 text-xl">★★★★★</div>
+            <a class="btn--secondary px-4 py-2 rounded-xl text-white border border-primary" href="#">Read more</a>
+        </article>
+
+        <article class="offerCard hidden flex flex-col items-center text-center p-8" data-menu="drinks">
+            <div class="offerCircle flex items-center justify-center w-40 h-40 rounded-full mb-6 ring-2 ring-white/40">
+            <img src="../IMG/ORANGE DRINK.png" alt="Cola Drink" class="w-24 h-24 object-contain" />
+            </div>
+            <h3 class="text-white font-extrabold tracking-wide text-xl">COLA DRINK</h3>
+            <p class="text-white font-semibold mt-2">$7.00</p>
+            <div class="mt-3 mb-4 text-yellow-400 text-xl">★★★★★</div>
+            <a class="btn--secondary px-4 py-2 rounded-xl text-white border border-primary" href="#">Read more</a>
+        </article>
+
+        <!-- ================= DESSERT ================= -->
+        <article class="offerCard hidden flex flex-col items-center text-center p-8" data-menu="dessert">
+            <div class="offerCircle flex items-center justify-center w-40 h-40 rounded-full mb-6 ring-2 ring-white/40">
+            <img src="../IMG/MUFFIN-CAKE.png" alt="Muffin" class="w-24 h-24 object-contain" />
+            </div>
+            <h3 class="text-white font-extrabold tracking-wide text-xl">MUFFIN</h3>
+            <p class="text-white font-semibold mt-2">$23.00</p>
+            <div class="mt-3 mb-4 text-yellow-400 text-xl">★★★★★</div>
+            <a class="btn--secondary px-4 py-2 rounded-xl text-white border border-primary" href="#">Read more</a>
+        </article>
+
+        <article class="offerCard hidden flex flex-col items-center text-center p-8" data-menu="dessert">
+            <div class="offerCircle flex items-center justify-center w-40 h-40 rounded-full mb-6 ring-2 ring-white/40">
+            <img src="../IMG/MUFFIN-CAKE.png" alt="Cupcake" class="w-24 h-24 object-contain" />
+            </div>
+            <h3 class="text-white font-extrabold tracking-wide text-xl">CUPCAKE</h3>
+            <p class="text-white font-semibold mt-2">$20.00</p>
+            <div class="mt-3 mb-4 text-yellow-400 text-xl">★★★★★</div>
+            <a class="btn--secondary px-4 py-2 rounded-xl text-white border border-primary" href="#">Read more</a>
+        </article>
+
+        <article class="offerCard hidden flex flex-col items-center text-center p-8" data-menu="dessert">
+            <div class="offerCircle flex items-center justify-center w-40 h-40 rounded-full mb-6 ring-2 ring-white/40">
+            <img src="../IMG/MUFFIN-CAKE.png" alt="Choco Cake" class="w-24 h-24 object-contain" />
+            </div>
+            <h3 class="text-white font-extrabold tracking-wide text-xl">CHOCO CAKE</h3>
+            <p class="text-white font-semibold mt-2">$26.00</p>
+            <div class="mt-3 mb-4 text-yellow-400 text-xl">★★★★★</div>
+            <a class="btn--secondary px-4 py-2 rounded-xl text-white border border-primary" href="#">Read more</a>
+        </article>
+
+        <article class="offerCard hidden flex flex-col items-center text-center p-8" data-menu="dessert">
+            <div class="offerCircle flex items-center justify-center w-40 h-40 rounded-full mb-6 ring-2 ring-white/40">
+            <img src="../IMG/MUFFIN-CAKE.png" alt="Muffin" class="w-24 h-24 object-contain" />
+            </div>
+            <h3 class="text-white font-extrabold tracking-wide text-xl">MUFFIN</h3>
+            <p class="text-white font-semibold mt-2">$23.00</p>
+            <div class="mt-3 mb-4 text-yellow-400 text-xl">★★★★★</div>
+            <a class="btn--secondary px-4 py-2 rounded-xl text-white border border-primary" href="#">Read more</a>
+        </article>
+
+        <article class="offerCard hidden flex flex-col items-center text-center p-8" data-menu="dessert">
+            <div class="offerCircle flex items-center justify-center w-40 h-40 rounded-full mb-6 ring-2 ring-white/40">
+            <img src="../IMG/MUFFIN-CAKE.png" alt="Cupcake" class="w-24 h-24 object-contain" />
+            </div>
+            <h3 class="text-white font-extrabold tracking-wide text-xl">CUPCAKE</h3>
+            <p class="text-white font-semibold mt-2">$20.00</p>
+            <div class="mt-3 mb-4 text-yellow-400 text-xl">★★★★★</div>
+            <a class="btn--secondary px-4 py-2 rounded-xl text-white border border-primary" href="#">Read more</a>
+        </article>
+
+        <article class="offerCard hidden flex flex-col items-center text-center p-8" data-menu="dessert">
+            <div class="offerCircle flex items-center justify-center w-40 h-40 rounded-full mb-6 ring-2 ring-white/40">
+            <img src="../IMG/MUFFIN-CAKE.png" alt="Choco Cake" class="w-24 h-24 object-contain" />
+            </div>
+            <h3 class="text-white font-extrabold tracking-wide text-xl">CHOCO CAKE</h3>
+            <p class="text-white font-semibold mt-2">$26.00</p>
+            <div class="mt-3 mb-4 text-yellow-400 text-xl">★★★★★</div>
+            <a class="btn--secondary px-4 py-2 rounded-xl text-white border border-primary" href="#">Read more</a>
+        </article>
+
+        </div>
+    </div>
+    </section>
+
+<!-- Newsletter-->
+    <section
+      class="bg-primary flex flex-col items-center justify-center text-center pt-10 pb-10 md:pb-0"
+    >
+      <div class="container">
+        <div class="md:flex flex-col justify-center md:flex-row items-center">
+          <div>
+            <img class="hidden md:block" src="../IMG/chef.png" alt="" />
+          </div>
+          <div class="text-white pb-5 md:flex flex-col">
+            <h3>LET'S CONNECT</h3>
+            <p class="pb-5">and get a 10% off bill offers and invites</p>
+            <div class="max-w-xl bg-gray-100 p-4 md:flex-col">
+              <div class="flex items-center justify-between">
+                <input
+                  type="email"
+                  placeholder="YOUR EMAIL ADDRESS"
+                  class="flex-1 bg-transparent outline-none text-gray-500 placeholder-gray-400 text-sm"
+                />
+                <button
+                  class="ml-4 bg-amber-400 hover:bg-amber-500 text-black font-semibold px-6 py-2 rounded-xl transition"
+                >
+                  SUBSCRIBE
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- Footer -->
+<footer class="bg-gray-100 py-20">
+  <div class="container text-center">
+
+    <!-- Logo -->
+    <div class="flex justify-center mb-10">
+      <img src="../IMG/LOGO.png" alt="Get Pizza Logo" class="h-20 w-auto">
+    </div>
+
+    <!-- Address -->
+    <div class="mb-10 text-black">
+      <h3 class="font-extrabold text-2xl mb-2">ADDRESS</h3>
+      <p class="text-gray-700 leading-relaxed">
+        570 8th Ave, New York, NY<br>
+        10018 United States
+      </p>
+    </div>
+
+    <!-- Book a table -->
+    <div class="mb-10 text-black">
+      <h3 class="font-extrabold text-2xl mb-2">BOOK A TABLE</h3>
+      <p class="text-gray-700 leading-relaxed">
+        Dogfood Och Sliders Foodtruck.<br>
+        Under Om Oss Kan Ni Läsa
+      </p>
+    </div>
+
+    <!-- Opening hours -->
+    <div class="mb-10 text-black">
+      <h3 class="font-extrabold text-2xl mb-2">OPENING HOURS</h3>
+      <p class="text-gray-700 leading-relaxed">
+        Monday – Friday<br>
+        10.00 AM – 11.00 PM
+      </p>
+    </div>
+
+    <!-- Phone -->
+    <p class="text-primary text-lg font-medium tracking-widest">
+      0123456987
+    </p>
+
+  </div>
+</footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+    <script src="./js/slider.js"></script>
+    <script src="../js/toggleMenu.js"></script>
+    <script src="../js/tab.js"></script>
+    <script src="./js/accordion.js"></script>
+    <script src="./js/testimonial.js"></script>
+    <script src="./js/menuTab.js"></script>
+</body>
+</html>

@@ -119,7 +119,7 @@
     }
     .card,
     .eventCard {
-        @apply bg-white dark:bg-gray-800 dark:text-white p-8 rounded-xl shadow-md;
+        @apply bg-white p-8 rounded-xl shadow-md;
     }
     .card img{
         @apply size-16 mb-6;
