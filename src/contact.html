@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../dist/output.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css" />
+  <title>GET PIZZA</title>
+</head>
+
+<body class="">
+  <!-- Header -->
+  <header class="fixed top-0 left-0 p-5 w-full z-50 bg-white py-0 shadow-md">
+    <div class="container">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center gap-2 pt-5 pb-5">
+          <img class="size-full" src="../IMG/LOGO.png" alt="logo" />
+        </div>
+
+        <nav class="headerNav text-black">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="toggleMenu items-center">
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="transparent"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================
+       SECTION 1: MAPS
+  ========================== -->
+  <section id="maps" class="pt-28 md:pt-32">
+    <div class="w-full">
+      <!-- Notice (same vibe as screenshot) -->
+    <!-- Announcement -->
+    <div class="absolute top-0 left-0 w-full bg-white py-3 text-center z-20 pt-38">
+        <p class="text-primary font-semibold text-sm md:text-base flex items-center justify-center gap-2">
+        📢 This website provides information about our store. Online transactions are coming soon.
+        </p>
+    </div>
+
+      <!-- Map -->
+      <div class="w-full">
+        <!-- Replace the src with your exact Google Maps embed link -->
+        <iframe
+          class="w-full h-[800px] md:h-[520px] border-0 p-5 md:px-50"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Frontline%20Business%20Solutions%2C%20Baloc%20Rd%2C%20San%20Pablo%20City%2C%20Laguna&output=embed"
+          title="Store Location Map"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================
+       SECTION 2: FORMS
+  ========================== -->
+  <section id="contact" class="bg-[#EDBA65] py-16 md:py-20">
+    <div class="container">
+      <h2 class="text-center text-black font-extrabold tracking-wide text-[clamp(2.2rem,5vw,3.2rem)]">
+        GET IN TOUCH
+      </h2>
+
+      <form class="mt-2 max-w-3xl mx-auto">
+        <!-- First + Last Name -->
+        <div class="grid grid-cols-2 md:grid-cols-2 gap-2">
+          <input
+            type="text"
+            name="firstName"
+            placeholder="First Name"
+            class="w-full rounded-xl bg-white px-4 py-3 text-black placeholder:text-black/40 outline-none focus:ring-2 focus:ring-black/30"
+          />
+          <input
+            type="text"
+            name="lastName"
+            placeholder="Last Name"
+            class="w-full rounded-xl bg-white px-4 py-3 text-black placeholder:text-black/40 outline-none focus:ring-2 focus:ring-black/30"
+          />
+        </div>
+
+        <!-- Email -->
+        <div class="">
+          <input
+            type="email"
+            name="email"
+            placeholder="Email Address"
+            class="w-full rounded-xl bg-white px-4 py-3 text-black placeholder:text-black/40 outline-none focus:ring-2 focus:ring-black/30"
+          />
+        </div>
+
+        <!-- Subject -->
+        <div class="">
+          <input
+            type="text"
+            name="subject"
+            placeholder="Subject"
+            class="w-full rounded-xl bg-white px-4 py-3 text-black placeholder:text-black/40 outline-none focus:ring-2 focus:ring-black/30"
+          />
+        </div>
+
+        <!-- Message -->
+        <div class="">
+          <textarea
+            name="message"
+            rows="6"
+            placeholder="Your Message"
+            class="w-full rounded-xl bg-white px-4 py-3 text-black placeholder:text-black/40 outline-none focus:ring-2 focus:ring-black/30 resize-none"
+          ></textarea>
+        </div>
+
+        <!-- Button -->
+        <div class="mt-2 flex justify-center">
+          <button
+            type="submit"
+            class="bg-[#9B4A2F] text-white font-extrabold tracking-wide uppercase px-10 py-3 rounded-xl shadow-sm hover:opacity-95 active:scale-[0.99] transition"
+          >
+            SUBMIT FORM
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 py-20">
+    <div class="container text-center">
+      <!-- Logo -->
+      <div class="flex justify-center mb-10">
+        <img src="../IMG/LOGO.png" alt="Get Pizza Logo" class="h-20 w-auto" />
+      </div>
+
+      <!-- Address -->
+      <div class="mb-10 text-black">
+        <h3 class="font-extrabold text-2xl mb-2">ADDRESS</h3>
+        <p class="text-gray-700 leading-relaxed">
+          570 8th Ave, New York, NY<br />
+          10018 United States
+        </p>
+      </div>
+
+      <!-- Book a table -->
+      <div class="mb-10 text-black">
+        <h3 class="font-extrabold text-2xl mb-2">BOOK A TABLE</h3>
+        <p class="text-gray-700 leading-relaxed">
+          Dogfood Och Sliders Foodtruck.<br />
+          Under Om Oss Kan Ni Läsa
+        </p>
+      </div>
+
+      <!-- Opening hours -->
+      <div class="mb-10 text-black">
+        <h3 class="font-extrabold text-2xl mb-2">OPENING HOURS</h3>
+        <p class="text-gray-700 leading-relaxed">
+          Monday – Friday<br />
+          10.00 AM – 11.00 PM
+        </p>
+      </div>
+
+      <!-- Phone -->
+      <p class="text-primary text-lg font-medium tracking-widest">
+        0123456987
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+  <script src="./js/slider.js"></script>
+  <script src="../js/toggleMenu.js"></script>
+  <script src="../js/tab.js"></script>
+  <script src="./js/accordion.js"></script>
+  <script src="./js/testimonial.js"></script>
+</body>
+</html>

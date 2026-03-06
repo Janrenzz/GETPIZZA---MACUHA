@@ -31,6 +31,7 @@
     --color-primary: #B23920;
     --color-secondary: #FAEACE;
     --color-tertiary: #223c5f;
+    --color-fourth: #EDBA65;
 }
 
 @layer base{
@@ -83,20 +84,30 @@
         /* Desktop */
         md:shadow-none md:px-0 md:pb-0;
     }
+    .toggleMenu{
+    @apply flex flex-col gap-2 md:hidden cursor-pointer select-none;
+    }
+
+    /* Base line style (2 lines only) */
     .toggleMenu span{
-        @apply inline-block w-5 h-0.5 rounded-xl bg-black/80;
+    @apply block h-1 rounded-full bg-[#B4463A] transition-all duration-300 ease-in-out;
     }
-    .toggleMenu.open span:first-child {
-        @apply rotate-45 translate-y-2 duration-100;
+
+    /* Make the 1st line longer, 2nd line shorter */
+    .toggleMenu span:first-child{
+    @apply w-12;
     }
-    .toggleMenu.open span:nth-child(2){
-        @apply opacity-0;
+    .toggleMenu span:last-child{
+    @apply w-8;
     }
+
+    /* Animate to X on open */
+    .toggleMenu.open span:first-child{
+    @apply rotate-45 translate-y-1.5 w-12;
+    }
+
     .toggleMenu.open span:last-child{
-        @apply -rotate-45 -translate-y-1;
-    }
-    .toggleMenu {
-        @apply flex flex-col gap-1 md:hidden;
+    @apply -rotate-45 -translate-y-1.5 w-12;
     }
     .transparent {
         @apply hidden;
